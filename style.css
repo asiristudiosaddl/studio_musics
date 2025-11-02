@@ -18,14 +18,14 @@ header .container {
     left: 0;
     width: 100%;
     z-index: 2;
-    box-shadow: 2px 2px 2px 2px #88248f;
+    box-shadow: 2px 2px 2px 2px #A67C00; /* changed */
 }
 
 header h3 {
     margin: 0 45% 0 30px;
     font-family: 'Moirai One', cursive;
     font-size: 30px;
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
 }
 header nav ul {
     padding-top: 10px;
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
     transition: all 300ms;
 }
 
@@ -65,7 +65,7 @@ main .container {
 main .container #home h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
     text-shadow: 2px 2px white;
     font-size: 170px;
     letter-spacing: 30px;
@@ -93,7 +93,6 @@ section .container #profile img {
 section .container #profile .aside {
     padding: 170px 30px 20px 30px;
     text-align: center;
-
 }
 section .container #profile .aside h4 {
     font-size: 30px;
@@ -103,13 +102,13 @@ section .container #profile .aside h4 {
     color: white;
 }
 section .container #profile .aside p {
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
     font-family: 'Ysabeau SC', sans-serif;
 }
 
 /*ASIDE STYLE*/
 aside {
-    background-color: #ec3ef8;
+    background-color: #FFD700; /* changed */
     padding: 120px;
 }
 
@@ -141,7 +140,7 @@ aside  #song .container img:hover {
 aside  #song .container h5,p {
     font-family: 'Ysabeau SC', sans-serif;
     margin-top: 10px;
-    text-align: center
+    text-align: center;
 }
 aside .side {
     text-align: center;
@@ -171,7 +170,7 @@ article #contact {
 } 
 article  h3 {
     font-family: 'Ysabeau SC', sans-serif;
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
     text-align: center;
 }
 article #contact .second .icons {
@@ -197,219 +196,5 @@ footer {
 footer .container p {
     font-family: 'Inter', sans-serif;
     text-align: center;
-    color: #ec3ef8;
+    color: #FFD700; /* changed */
 }
-
-
-
-
-
-/*MEDIA QUERY L LAPTOP*/
-@media screen and (min-width: 1025px) and (max-width: 1290px) {
-    html {
-        margin: 0;
-        padding: 0;
-    }
-
-    header .container h3 {
-        display: none;
-    }
-    header .container nav {
-        list-style: none;
-        margin: 0 auto;
-        text-align:center;
-    }
-    main .container #home h1 {
-        font-size: 100px;
-        line-height: 150px;
-    }
-    section .container #profile .aside {
-        padding-top: 70px;
-    }
-    aside #song .container {
-        padding: 0;
-    }
-    aside #song .container a {
-        margin: 10px;
-        padding: 0 30px 0 30px;
-    }
-    aside .side {
-        letter-spacing: 10px;
-        padding-top: 30px;
-    }
-    article #contact .second .icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-    }
-    
-}
-/*MEDIA QUERY SMALL LAPTOP*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    header .container h3 {
-        list-style: none;
-        margin: 0 auto;
-        text-align: center;
-    }
-    header .container nav {
-        display: none;
-    }
-    main .container #home h1 {
-        font-size: 100px;
-    }
-    section .container #profile {
-        padding: 60px;
-    }
-    section .container #profile img {
-        margin: 20px;
-        width: 40%;
-        height: 20%;
-    }
-    section .container #profile .aside {
-        padding-top: 0;
-        padding-bottom: 40px;
-    }
-    aside {
-        padding: 10px;
-    }
-    aside .side {
-        padding-bottom: 30px;
-    }
-    aside #song .container {
-        padding: 20px;
-    }
-}
-
-/*MEDIA QUERY TABLET*/
-@media screen and (min-width: 425px) and (max-width:769px) {
-    header .container h3 {
-        list-style: none;
-        margin: 0 auto;
-        text-align: center;
-    }
-    header .container nav {
-        display: none;
-    }
-    main .container #home h1 {
-        font-size: 35px;
-        line-height: 60px;
-    }
-    section .container #profile {
-        display: block;
-        padding: 150px 50px 100px 50px;
-    }
-    section .container #profile img {
-        min-width: 100%;
-        margin: auto;
-    }
-    section .container #profile .aside {
-        padding-top: 30px;
-    }
-    section .container #profile .aside h4 {
-        margin-top: 20px;
-    }
-    aside {
-        padding: 70px;
-    }
-    aside #song .container {
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
-    aside #song .container a img{
-        text-align: center;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 50%;
-    }
-    aside  #song .container img:hover {
-    width: 55%;
-    transition: all 500ms;
-}
-    
-    article {
-        padding: 80px 60px 60px 60px;
-    }
-    article #contact .second .icons p a img {
-        width: 20px;
-    }
-}
-/*MEDIA QUERY PHONES*/
-@media screen and (max-width:425px) {
-    header .container h3 {
-        list-style: none;
-        margin: 0 auto;
-        text-align: center;
-    }
-    header .container nav {
-        display: none;
-    }
-    main .container #home h1 {
-        padding: 170px 20px 50px 20px;
-        font-size: 30px;
-        line-height: 60px;
-    }
-    section .container #profile {
-        display: block;
-        padding: 150px 40px 100px 40px;
-    }
-    section .container #profile img {
-        width: 100%;
-        margin: auto;
-    }
-    section .container #profile .aside {
-        padding: 30px 10px 20px 10px;
-    }
-    section .container #profile .aside h4 {
-        margin-top: 20px;
-    }
-    aside {
-        padding: 70px;
-    }
-    aside #song .container {
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
-    aside #song .container a img{
-        text-align: center;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 70%;
-    }
-    aside  #song .container img:hover {
-    width: 80%;
-    transition: all 500ms;
-}
-    
-    article {
-        padding: 80px 20px 60px 20px;
-    }
-    article #contact .second .icons p a img {
-        width: 20px;
-        margin: 0 10px;
-    }
-}
-/*MEDIA QUERY S PHONES*/
-@media screen and (max-width:320px) {
-    header .container h3 {
-        padding: 0 20px;
-        list-style: none;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    main .container #home h1 {
-        padding: 170px 20px 50px 20px;
-        font-size: 15px;
-        line-height: 60px;
-    }
-    aside  #song .container img:hover {
-    width: 80%;
-    transition: all 500ms;
-}
-}
-
