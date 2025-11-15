@@ -51,12 +51,12 @@
 }
 
 .live h1{
-    color: rgb(200, 13, 135);
+    color: white; /* changed from pink to white */
     font-size: 100px;
     padding: 10px 0px;
     font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .live p{
@@ -498,5 +498,6 @@
   font-weight: 400;
   font-style: normal;
 }
+
 
 
