@@ -1,212 +1,132 @@
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asiri Perera</title>
 
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-}
+    <link rel="stylesheet" href="style.css" />
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Inter:wght@500;600&family=Moirai+One&family=Quicksand:wght@300;400&family=Ysabeau+SC:wght@100&display=swap" rel="stylesheet" />
 
-/* HEADER */
-header {
-  width: 100%;
-  background: #000;
-  color: #fff;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+    <link rel="icon" type="image/jpg" href="images/nattymiller.jpg" />
+</head>
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<body>
 
-header h3 {
-  font-size: 22px;
-  font-weight: 600;
-}
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <h3>Asiri Perera</h3>
 
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
+            <!-- Mobile toggle button -->
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#song">Songs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-nav ul li a:hover {
-  opacity: 0.7;
-}
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+            <div id="home">
+                <h1>ASIRI<br>PERERA</h1>
+            </div>
+        </div>
+    </main>
 
-/* MOBILE NAVIGATION MENU */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    background: black;
-    width: 100%;
-    padding: 20px 0;
-    display: none;
-  }
-  nav ul.active {
-    display: flex;
-  }
-}
+    <!-- PROFILE SECTION -->
+    <section>
+        <div class="container">
+            <div id="profile">
+                <img src="images/profile (1).jpg" alt="performer" id="img1" class="visible">
+                <img src="images/profile (2).jpg" alt="performer" id="img2" class="hidden">
+                <img src="images/profile (3).jpg" alt="performer" id="img3" class="hidden">
 
-/* MAIN SECTION */
-#home {
-  text-align: center;
-  padding: 100px 0;
-}
+                <div class="aside">
+                    <h4>Who is Asiri ?</h4>
+                    <p>Asiri Perera is a Pan Afrikan/ Int'l performer, music composer and recording artist of Yoruba descent.
+                        He was born and raised in Port-harcourt, Nigeria and discovered music at a very early age.
+                        Christened "Ogo Boma Seyi" and later on renamed "Henry Jnr II".</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-#home h1 {
-  font-size: 70px;
-  font-weight: 600;
-}
+    <!-- SONGS SECTION -->
+    <aside>
+        <div id="song">
+            <h3>OTHER POPULAR RELEASES</h3>
 
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: 45px;
-  }
-}
+            <div class="container">
 
-/* PROFILE SECTION */
-#profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 80px 0;
-}
+                <a href="https://open.spotify.com/track/4lzx2oz6vwDft22CeNwoTm?si=6b38440a890b4e17" target="_blank" aria-label="Double Money">
+                    <img src="images/music (1).jpg" alt="">
+                    <h5>DOUBLE MONEY</h5>
+                    <p>Asiri Perera</p>
+                </a>
 
-#profile img {
-  width: 40%;
-  border-radius: 10px;
-}
+                <a href="https://open.spotify.com/track/7C8Hsu6C5ftwayTtAcpOKD?si=cfd08f83a7764d01" target="_blank" aria-label="Love in the Air">
+                    <img src="images/music (2).jpg" alt="">
+                    <h5>LOVE IN THE AIR</h5>
+                    <p>Asiri Perera</p>
+                </a>
 
-#profile .aside {
-  width: 50%;
-}
+                <a href="https://open.spotify.com/track/6wfOBNCdw30MzZnRGNyW0A?si=24514bf90d1048e8" target="_blank" aria-label="Peace of Mind">
+                    <img src="images/music (3).jpg" alt="">
+                    <h5>PEACE OF MIND</h5>
+                    <p>Asiri Perera</p>
+                </a>
 
-#profile .aside h4 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+            </div>
 
-/* Mobile profile adjustments */
-@media (max-width: 768px) {
-  #profile {
-    flex-direction: column;
-    text-align: center;
-  }
+            <div class="side">
+                <h4>
+                    <a href="https://open.spotify.com/artist/5n5glQrKr0yIEhSKkiemR9?si=hJUO6vunR2KnJNV7_7jb_g" target="_blank">MORE...</a>
+                </h4>
+            </div>
+        </div>
+    </aside>
 
-  #profile img {
-    width: 80%;
-  }
+    <!-- CONTACT -->
+    <article>
+        <h3>CONNECT WITH ASIRI</h3>
 
-  #profile .aside {
-    width: 100%;
-  }
-}
+        <div id="contact">
+            <div class="second">
+                <p>Music has an incredible power to touch our souls, evoke emotions, and bring people together. As listeners, we often form a deep and meaningful connection with the music and the artists who create it.
+                    When artists share their vulnerabilities, struggles, and triumphs through their music, it creates a sense of intimacy and connection.
+                </p>
 
-/* SONGS SECTION */
-aside #song {
-  text-align: center;
-  padding: 60px 0;
-}
+                <div class="icons">
+                    <p><a href="https://www.instagram.com/asi_asiri?igsh=MTMxNTZtZTdrcDF5cg%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram.png" alt=""></a></p>
+                    <p><a href="https://wa.me/94754587939" target="_blank"><img src="images/twitter.png" alt=""></a></p>
+                    <p><a href="https://www.facebook.com/share/1SgzcyeaLE/?mibextid=wwXIfr" target="_blank"><img src="images/facebook.png" alt=""></a></p>
+                    <p><a href="https://open.spotify.com/artist/1bVCiiEdsc5PXI2NlmOyxp?si=Q2E9x2XISt6VQm1iIoKGkg" target="_blank"><img src="images/spotify.png" alt=""></a></p>
+                    <p><a href="https://youtube.com/@asiripereraofficial?si=6iPsgVyOGrxS6juJ" target="_blank"><img src="images/itunes.png" alt=""></a></p>
+                </div>
+            </div>
+        </div>
+    </article>
 
-aside #song .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; ASIRI PERERA MUSIC 2025</p>
+        </div>
+    </footer>
 
-aside #song a {
-  width: 250px;
-  text-decoration: none;
-  color: black;
-}
+    <!-- JS -->
+    <script src="main.js"></script>
 
-aside #song img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.side h4 a {
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* CONTACT SECTION */
-article {
-  padding: 70px 0;
-  text-align: center;
-}
-
-article .second {
-  width: 80%;
-  margin: auto;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.icons img {
-  width: 40px;
-}
-
-/* FOOTER */
-footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-}
-
-
-/* EXTRA SMALL DEVICES FIXES */
-@media (max-width: 480px) {
-  header h3 {
-    font-size: 18px;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  #home h1 {
-    font-size: 35px;
-  }
-
-  aside #song a {
-    width: 90%;
-  }
-
-  .icons img {
-    width: 32px;
-  }
-}
+</body>
+</html>
