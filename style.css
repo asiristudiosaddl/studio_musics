@@ -1,200 +1,232 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-html {
-    background-color: black;
+/* Reset / Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #111;
+  line-height: 1.5;
+  background: #fff;
 }
 
-/*NAVIGATION STYLE*/
+/* Layout container */
+.container {
+  width: 94%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 header .container {
-    color: white;
-    display: flex;
-    background-color: black;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    box-shadow: 2px 2px 2px 2px #A67C00; /* changed */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
 }
 
+/* Site title */
 header h3 {
-    margin: 0 45% 0 30px;
-    font-family: 'Moirai One', cursive;
-    font-size: 30px;
-    color: #FFD700; /* changed */
-}
-header nav ul {
-    padding-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 35px;
+/* Nav */
+nav {
+  position: relative;
 }
 
-nav ul li a {
-    font-family: 'Moirai One', cursive;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 700;
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
 }
 
-nav ul li a:hover {
-    color: #FFD700; /* changed */
-    transition: all 300ms;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 8px;
+  display: inline-block;
+}
+nav a:hover { opacity: 0.85; }
+
+/* Hamburger toggle (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
 }
 
-/*MAIN STYLE*/
-main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 50px 20px 20px ;
-    text-align: center;
-    color: white;
-}
-main .container {
-    padding: 20px 0 50px 0;
-}
-main .container #home h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    color: #FFD700; /* changed */
-    text-shadow: 2px 2px white;
-    font-size: 170px;
-    letter-spacing: 30px;
-    line-height: 230px;
-    padding: 170px 50px 50px 50px;
-    text-align: center;
+/* MAIN / HOME */
+#home {
+  text-align: center;
+  padding: 80px 0;
 }
 
-/*SECTION STYLE*/
-section {
-    background-color: black;
-}
-section .container #profile {
-    display: flex;
-    padding: 150px 100px 100px 100px;
-}
-.hidden {
-    display: none;
-}
-section .container #profile img {
-    margin: 70px;
-    width: 40%;
-    border-radius: 5px;
-}
-section .container #profile .aside {
-    padding: 170px 30px 20px 30px;
-    text-align: center;
-}
-section .container #profile .aside h4 {
-    font-size: 30px;
-    font-family: 'Moirai One', cursive;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    color: white;
-}
-section .container #profile .aside p {
-    color: #FFD700; /* changed */
-    font-family: 'Ysabeau SC', sans-serif;
+#home h1 {
+  font-size: 64px;
+  line-height: 0.95;
+  letter-spacing: 2px;
 }
 
-/*ASIDE STYLE*/
-aside {
-    background-color: #FFD700; /* changed */
-    padding: 120px;
+/* Sections */
+section, aside, article {
+  padding: 48px 0;
 }
 
-aside #song h3 {
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
-    padding:120px 20px 20px 20px;
-    text-shadow: 2px 2px white;
-}
-aside  #song .container {
-    display: flex;
-    padding: 20px 100px 20px 100px;
-}
-aside  #song .container a{
-    padding:50px 30px 30px 30px;
-    text-decoration: none;
-    color: black;
-    margin: 30px;
-}
-aside  #song .container a img {
-    width: 100%;
-    border-radius: 5px;
-}
-aside  #song .container img:hover {
-    width: 105%;
-    transition: all 500ms;
-}
-aside  #song .container h5,p {
-    font-family: 'Ysabeau SC', sans-serif;
-    margin-top: 10px;
-    text-align: center;
-}
-aside .side {
-    text-align: center;
-}
-aside .side a {
-    text-decoration: none;
-    font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
-    color: black;
-    text-shadow: 2px 2px white;
-}
-aside .side a:hover {
-    font-size: 35px;
-    color: white;
-    text-shadow: 2px 2px black;
-    transition: all 500ms;
+/* PROFILE section - responsive card */
+#profile {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
-/*ARTICLE STYLE*/
-article {
-    background-color: white;
-    color: black;
-    padding: 150px 200px 100px 200px;
-}
-article #contact {
-    padding: 20px;
-} 
-article  h3 {
-    font-family: 'Ysabeau SC', sans-serif;
-    color: #FFD700; /* changed */
-    text-align: center;
-}
-article #contact .second .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-}
-article #contact .second .icons p a img {
-    width: 35px;
-    margin: 0 25px 0 25px;
-}
-article #contact .second .icons p img:hover {
-    width: 40px;
-    transition: all 500ms;
+#profile img {
+  max-width: 420px; /* caps the image so it doesn't overflow */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 
-/*FOOTER STYLE*/
+#profile .aside {
+  flex: 1 1 320px; /* grow, shrink, base 320px */
+  min-width: 260px;
+}
+
+#profile .aside h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* SONGS grid */
+aside#song .container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+aside#song a {
+  text-decoration: none;
+  color: inherit;
+  width: 260px;            /* preferred width */
+  max-width: 100%;         /* but don't overflow */
+  display: block;
+  text-align: center;
+}
+
+aside#song img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.side {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.side a { color: inherit; text-decoration: none; }
+
+/* CONTACT */
+article .second {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.icons img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+/* FOOTER */
 footer {
-    background-color: black;
-    padding: 20px;
+  background: #000;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center;
 }
-footer .container p {
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    color: #FFD700; /* changed */
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet / narrow screens */
+@media (max-width: 900px) {
+  #home h1 { font-size: 48px; padding-top: 40px; }
+  header h3 { font-size: 18px; }
+}
+
+/* Mobile: convert nav to toggle + column */
+@media (max-width: 768px) {
+  .menu-toggle { display: inline-flex; align-items:center; justify-content:center; }
+
+  nav ul {
+    display: none;              /* hidden by default on mobile */
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    left: 0;
+    background: #000;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 10px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 10px;
+    font-size: 16px;
+  }
+
+  /* Home title smaller on phones */
+  #home h1 { font-size: 36px; }
+
+  /* Make songs responsive */
+  aside#song a { width: calc(50% - 14px); }
+  .icons img { width: 36px; }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  aside#song a { width: 100%; }
+  #profile img { max-width: 100%; }
+  #home h1 { font-size: 30px; }
 }
