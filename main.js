@@ -1,3 +1,10 @@
+const nav = document.querySelector("nav ul");
+const header = document.querySelector("header");
+
+header.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
 function smoothScroll(target, duration) {
     const targetElement = document.querySelector(target);
     const targetPosition = targetElement.offsetTop;
